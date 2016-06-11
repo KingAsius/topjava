@@ -1,0 +1,82 @@
+Index: src/main/webapp/WEB-INF/web.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/webapp/WEB-INF/web.xml	(revision a0eaa0d54f3c47a9c7de73f872b42587918b5487)
++++ src/main/webapp/WEB-INF/web.xml	(revision a0eaa0d54f3c47a9c7de73f872b42587918b5487)
+@@ -0,0 +1,18 @@
++<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
++         xmlns="http://java.sun.com/xml/ns/javaee"
++         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
++         id="WebApp_ID" version="2.5">
++
++    <display-name>Topjava</display-name>
++
++    <servlet>
++        <servlet-name>userServlet</servlet-name>
++        <servlet-class>ru.javawebinar.topjava.web.UserServlet</servlet-class>
++        <load-on-startup>0</load-on-startup>
++    </servlet>
++    <servlet-mapping>
++        <servlet-name>userServlet</servlet-name>
++        <url-pattern>/users</url-pattern>
++    </servlet-mapping>
++
++</web-app>
+Index: src/main/webapp/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/webapp/index.html	(revision a0eaa0d54f3c47a9c7de73f872b42587918b5487)
++++ src/main/webapp/index.html	(revision a0eaa0d54f3c47a9c7de73f872b42587918b5487)
+@@ -0,0 +1,14 @@
++<!DOCTYPE html>
++<html>
++<head>
++    <meta charset="UTF-8">
++    <title>Java Enterprise (Topjava)</title>
++</head>
++<body>
++<h2>Проект "<a href="https://github.com/JavaWebinar/topjava07" target="_blank">Java Enterprise (Topjava)"</a></h2>
++<hr>
++<ul>
++    <li><a href="users">User List</a></li>
++</ul>
++</body>
++</html>
+Index: src/main/webapp/userList.jsp
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- src/main/webapp/userList.jsp	(revision a0eaa0d54f3c47a9c7de73f872b42587918b5487)
++++ src/main/webapp/userList.jsp	(revision a0eaa0d54f3c47a9c7de73f872b42587918b5487)
+@@ -0,0 +1,10 @@
++<%@ page contentType="text/html;charset=UTF-8" language="java" %>
++<html>
++<head>
++    <title>User list</title>
++</head>
++<body>
++<h2><a href="index.html">Home</a></h2>
++<h2>User list</h2>
++</body>
++</html>
+Index: pom.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- pom.xml	(date 1464632045000)
++++ pom.xml	(date 1464815793000)
+@@ -4,7 +4,7 @@
+ 
+     <groupId>ru.javawebinar</groupId>
+     <artifactId>topjava</artifactId>
+-    <packaging>jar</packaging>
++    <packaging>war</packaging>
+ 
+     <version>1.0-SNAPSHOT</version>
+ 
