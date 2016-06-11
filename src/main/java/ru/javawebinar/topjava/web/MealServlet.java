@@ -40,7 +40,11 @@ public class MealServlet extends HttpServlet {
                 Integer.valueOf(request.getParameter("calories")));
         LOG.info(userMeal.isNew() ? "Create {}" : "Update {}", userMeal);
         repository.save(userMeal);
+<<<<<<< Updated upstream
         response.sendRedirect("mealList.jsp");
+=======
+        response.sendRedirect("meals");
+>>>>>>> Stashed changes
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
